@@ -16,8 +16,7 @@ int main() {
 
     some_struct_t static_ss;
     static_ss.a = 10;
-    static_ss.b = &static_ss.a; // ??
-//    static_ss.str = (char *) calloc(1, sizeof(char));
+    static_ss.b = &static_ss.a;
     static_ss.str = "array\n";
     static_ss.partner = NULL;
 
