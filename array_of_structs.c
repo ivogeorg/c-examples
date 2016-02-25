@@ -21,16 +21,20 @@ int main() {
     static_ss.str = "array\n";
     static_ss.partner = NULL;
 
+    // allocate the array
     some_struct_pt array_of_ss = (some_struct_pt) calloc(ARRAY_SIZE, sizeof(some_struct_t));
 
+    // traverse the array
     for (unsigned u=0; u<ARRAY_SIZE; u++) {
         array_of_ss[u] = static_ss;
     }
 
+    // print
     for (unsigned u=0; u<ARRAY_SIZE; u++) {
         printf("%d-%d-%s\n", array_of_ss[u].a, *array_of_ss[u].b, array_of_ss[u].str);
     }
 
+    // free the array
     free(array_of_ss);
 
     return 0;
